@@ -7,19 +7,35 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
+
+  <style type="text/css">
+
+      #survey-btn {
+        background-color: #004080;
+      }
+
+      a {
+        color: #004080;
+      }
+
+    </style>
+
   <body>
     <div class="container">
 
       <div class="row">
         <div class="col-12">
           <div class="jumbotron">
-            <h1 class="display-3">Friend Finder</h1>
+            <h1 class="display-3"><span class="fa fa-user-plus"></span> Friend Finder</h1>
             <hr class="my-4">
-            <h2>Answer a few basic questions.</h2>
-            <h2>Then find the friend with the greatest compatibility!</h2>
+            <h2>Answer a few basic questions.</h2><br />
+            <h2>Then find the friend with the greatest compatibility!</h2><br />
             <p class="lead">
-              <a class="btn btn-primary btn-lg" href="/survey" role="button">Go to Survey</a>
+              <a id="survey-btn" class="btn btn-primary btn-lg" href="/survey" role="button"><span class="fa fa-file-text-o"></span> Go to Survey</a>
             </p>
           </div> 
         </div> <!-- column -->
@@ -27,9 +43,9 @@
 
       <div class="row">
         <div class="col-12">
-          <a href="#">API Friends List</a>
+          <a href="/api/friends">API Friends List</a>
           <span> | </span>
-          <a href="#">GitHub Repo</a>
+          <a href="https://github.com/nsd32/friend-finder" target="_blank">GitHub Repo</a>
         </div> <!-- column --> 
       </div> <!-- row -->
 

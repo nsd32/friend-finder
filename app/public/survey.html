@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- jQuery -->
     <script
     src="https://code.jquery.com/jquery-3.2.1.js"
@@ -15,6 +16,26 @@
     crossorigin="anonymous"></script>
 
   </head>
+
+  <style type="text/css">
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      #submit-btn {
+        background-color: #004080;
+      }
+
+      a {
+        color: #004080;
+      }
+
+      #name, #photo {
+        box-shadow: 2px 2px grey;
+      }
+    </style>
+
   <body>
     <div class="container"><br />
 
@@ -32,18 +53,18 @@
             <div class="form-group">
               <h2>About You</h2>
               <h5><label class="form-control-label" for="name">Name (Required)</label></h5>
-              <input type="text" class="form-control" id="name" placeholder="Example input">
+              <input type="text" class="form-control" id="name">
             </div>
             <div class="form-group">
               <h5><label class="form-control-label" for="photo">Link to Photo Image (Required)</label></h5>
-              <input type="text" class="form-control" id="photo" placeholder="Another input">
+              <input type="text" class="form-control" id="photo">
             </div>
             <hr class="my-4">
 
             <div class="form-group">
               <h2>Question 1</h2>
-              <label for="exampleFormControlSelect1">Example select</label>
-              <select class="form-control custom-select" id="question-one">
+              <label for="exampleFormControlSelect1">You like dogs more than cats.</label><br />
+              <select id="question-one">
                 <option selected>Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -55,8 +76,8 @@
 
             <div class="form-group">
               <h2>Question 2</h2>
-              <label for="exampleFormControlSelect1">Example select</label>
-              <select class="form-control custom-select" id="question-two">
+              <label for="exampleFormControlSelect1">You like Netflix more than Hulu.</label><br />
+              <select id="question-two">
                 <option selected>Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -68,8 +89,8 @@
 
             <div class="form-group">
               <h2>Question 3</h2>
-              <label for="exampleFormControlSelect1">Example select</label>
-              <select class="form-control custom-select" id="question-three">
+              <label for="exampleFormControlSelect1">You like Facebook more than Twitter.</label><br />
+              <select id="question-three">
                 <option selected>Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -81,8 +102,8 @@
 
             <div class="form-group">
               <h2>Question 4</h2>
-              <label for="exampleFormControlSelect1">Example select</label>
-              <select class="form-control custom-select" id="question-four">
+              <label for="exampleFormControlSelect1">While walking, you like Music over a Podcast.</label><br />
+              <select id="question-four">
                 <option selected>Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -94,8 +115,8 @@
 
             <div class="form-group">
               <h2>Question 5</h2>
-              <label for="exampleFormControlSelect1">Example select</label>
-              <select class="form-control custom-select" id="question-five">
+              <label for="exampleFormControlSelect1">You like iOS over Android.</label><br />
+              <select id="question-five">
                 <option selected>Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -107,8 +128,8 @@
 
             <div class="form-group">
               <h2>Question 6</h2>
-              <label for="exampleFormControlSelect1">Example select</label>
-              <select class="form-control custom-select" id="question-six">
+              <label for="exampleFormControlSelect1">You like a big party over a small gathering.</label><br />
+              <select id="question-six">
                 <option selected>Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -120,8 +141,8 @@
 
             <div class="form-group">
               <h2>Question 7</h2>
-              <label for="exampleFormControlSelect1">Example select</label>
-              <select class="form-control custom-select" id="question-seven">
+              <label for="exampleFormControlSelect1">You'd rather do laundry than dishes.</label><br />
+              <select id="question-seven">
                 <option selected>Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -133,8 +154,8 @@
 
             <div class="form-group">
               <h2>Question 8</h2>
-              <label for="exampleFormControlSelect1">Example select</label>
-              <select class="form-control custom-select" id="question-eight">
+              <label for="exampleFormControlSelect1">You'd rather have a lot of money than a lot of free time.</label><br />
+              <select id="question-eight">
                 <option selected>Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -146,8 +167,8 @@
 
             <div class="form-group">
               <h2>Question 9</h2>
-              <label for="exampleFormControlSelect1">Example select</label>
-              <select class="form-control custom-select" id="question-nine">
+              <label for="exampleFormControlSelect1">You like pancakes more than waffles.</label><br />
+              <select id="question-nine">
                 <option selected>Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -159,8 +180,8 @@
 
             <div class="form-group">
               <h2>Question 10</h2>
-              <label for="exampleFormControlSelect1">Example select</label>
-              <select class="form-control custom-select" id="question-ten">
+              <label for="exampleFormControlSelect1">You like hot coffee more than iced coffee.</label><br />
+              <select id="question-ten">
                 <option selected>Select an option</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -187,21 +208,67 @@
       </div> <!-- row -->
       <br />
 
+      <div id="friend-modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 id="friend-modal-title" class="modal-title"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="friend-modal-body" class="modal-body">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="error-modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 id="error-modal-title" class="modal-title">Error!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="error-modal-body" class="modal-body">
+              <p>Please fill out all fields before submitting!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div> <!-- container -->
 
     <script type="text/javascript">
-
-      $('#clear').click(function() {
-        let currentURL = window.location.origin
-        $.ajax({
-          url: currentURL + "/api/clear",
-          method: "POST"
-        }); 
-      });
-
       
       $('#submit-btn').click(function(event) {
-      event.preventDefault();
+        event.preventDefault();
+
+        var questions = [$('#question-one'), $('#question-two'), $('#question-three'), $('#question-four'), $('#question-five'), $('#question-six'), $('#question-seven'), $('#question-eight'), $('#question-nine'), $('#question-ten')]
+
+        if ($('#name').val() === '' || $('#photo').val() === '') {
+          $('#error-modal').modal('show');
+          return;
+        }
+
+        for (let i = 0; i < questions.length; i++) {
+          if (questions[i].val() === 'Select an option') {
+            $('#error-modal').modal('show');
+            return;
+          }
+        }
+
+        $('friend-modal-title').empty();
+        $('friend-modal-body').empty();
 
         var one = $('#question-one').val();
         var two = $('#question-two').val();
@@ -228,49 +295,34 @@
         $.post({
           url: currentURL + '/api/friends',
           contentType: 'application/json'
-        }, JSON.stringify(newFriend));
+        }, JSON.stringify(newFriend))
+        .done(function(data) {
+          console.log(data);
+          $('#friend-modal-title').text(data.name);
+          $('#friend-modal-body').append('<p>You have a match!</p>')
+          $('#friend-modal-body').append(`<img src=${data.photo} />`);
+          $('#friend-modal').modal('show');
 
+        })
+        
         $('#name').val('');
         $('#photo').val('');
-        $('#question-one').val('');
-        $('#question-two').val('');
-        $('#question-three').val('');
-        $('#question-four').val('');
-        $('#question-five').val('');
-        $('#question-six').val('');
-        $('#question-seven').val('');
-        $('#question-eight').val('');
-        $('#question-nine').val('');
-        $('#question-ten').val('');
+        //$('#my_select').get(0).selectedIndex = 1;
+        $('#question-one').get(0).selectedIndex = 0;
+        $('#question-two').get(0).selectedIndex = 0;
+        $('#question-three').get(0).selectedIndex = 0;
+        $('#question-four').get(0).selectedIndex = 0;
+        $('#question-five').get(0).selectedIndex = 0;
+        $('#question-six').get(0).selectedIndex = 0;
+        $('#question-seven').get(0).selectedIndex = 0;
+        $('#question-eight').get(0).selectedIndex = 0;
+        $('#question-nine').get(0).selectedIndex = 0;
+        $('#question-ten').get(0).selectedIndex = 0;
 
-        $.get('/api/friends', function(data) {
-            // console.log(data[0])
-          var index = 0;
-          var smallestTotal = 0;
-
-          for (let k = 0; k < data[0].scores.length; k++) {
-            smallestTotal += Math.abs(newFriend.scores[k] - data[0].scores[k]);
-          }
-
-          for (let i = 1; i < data.length - 1; i++) {
-            for (let j = 0; j < data[i].scores.length; j++) {
-              var currentTotal = 0;
-              currentTotal += Math.abs(data[i].scores[j] - newFriend.scores[j])
-
-              if (currentTotal < smallestTotal) {
-                smallestTotal = currentTotal;
-                index = i;
-              }
-            }
-          }
-            
-        });
-
-      });
-
-      
+      }); 
 
     </script>
+
 
     <!-- Optional JavaScript --> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>

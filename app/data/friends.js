@@ -2,7 +2,7 @@ var friends = [
 
 	{
 	  "name":"Ahmed",
-	  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+	  "photo":"https://pbs.twimg.com/profile_images/779129231028682752/ijbnCAIa.jpg",
 	  "scores":[
 	      5,
 	      1,
