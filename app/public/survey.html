@@ -228,7 +228,7 @@
         $.post({
           url: currentURL + '/api/friends',
           contentType: 'application/json'
-        }, JSON.stringify(newFriend));  
+        }, JSON.stringify(newFriend));
 
         $('#name').val('');
         $('#photo').val('');
@@ -242,6 +242,29 @@
         $('#question-eight').val('');
         $('#question-nine').val('');
         $('#question-ten').val('');
+
+        $.get('/api/friends', function(data) {
+            // console.log(data[0])
+          var index = 0;
+          var smallestTotal = 0;
+
+          for (let k = 0; k < data[0].scores.length; k++) {
+            smallestTotal += Math.abs(newFriend.scores[k] - data[0].scores[k]);
+          }
+
+          for (let i = 1; i < data.length - 1; i++) {
+            for (let j = 0; j < data[i].scores.length; j++) {
+              var currentTotal = 0;
+              currentTotal += Math.abs(data[i].scores[j] - newFriend.scores[j])
+
+              if (currentTotal < smallestTotal) {
+                smallestTotal = currentTotal;
+                index = i;
+              }
+            }
+          }
+            
+        });
 
       });
 
