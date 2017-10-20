@@ -26,22 +26,24 @@ module.exports = function(app) {
 		for (let i = 1; i < friends.length; i++) {
 		  var currentTotal = 0;
 
-		for (let j = 0; j < friends[i].scores.length; j++) { 
-		  currentTotal += (Math.abs(friends[i].scores[j] - newFriend.scores[j]));
-		}
+	            for (let j = 0; j < friends[i].scores.length; j++) { 
+		      currentTotal += (Math.abs(friends[i].scores[j] - newFriend.scores[j]));
+		    }
 
-		if (currentTotal < smallestTotal) {
-		  smallestTotal = currentTotal;
-		  index = i;
-		}
-	      }
-	      console.log('Smallest Total: ' + smallestTotal);
-	      console.log('Index: ' + index);
-	      console.log(friends[index]); 
+		    if (currentTotal < smallestTotal) {
+		      smallestTotal = currentTotal;
+		      index = i;
+		    }
+	        }
+		
+	        console.log('Smallest Total: ' + smallestTotal);
+	        console.log('Index: ' + index);
+	        console.log(friends[index]); 
 
-	      res.send(friends[index]);
+	        res.send(friends[index]);
 
-	      friends.push(newFriend);
+	        friends.push(newFriend);
+		
 	});
 
 }
