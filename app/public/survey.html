@@ -212,13 +212,13 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 id="friend-modal-title" class="modal-title"></h5>
+              <h5 id="friend-modal-title" class="modal-title">You have a match!</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div id="friend-modal-body" class="modal-body">
-              
+            <div class="modal-body">
+              <img id="friend-image" src="">  
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -267,9 +267,6 @@
           }
         }
 
-        $('friend-modal-title').empty();
-        $('friend-modal-body').empty();
-
         var one = $('#question-one').val();
         var two = $('#question-two').val();
         var three = $('#question-three').val();
@@ -298,9 +295,9 @@
         }, JSON.stringify(newFriend))
         .done(function(data) {
           console.log(data);
-          $('#friend-modal-title').text(data.name);
-          $('#friend-modal-body').append('<p>You have a match!</p>')
-          $('#friend-modal-body').append(`<img src=${data.photo} />`);
+          
+          $('#friend-modal-body').append(`<p>${data.name}</p>`);
+          $('#friend-image').attr('src', data.photo);
           $('#friend-modal').modal('show');
 
         })
