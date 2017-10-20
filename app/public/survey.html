@@ -218,6 +218,7 @@
               </button>
             </div>
             <div class="modal-body">
+              <h6 id="friend-name"></h6>
               <img id="friend-image" src="">  
             </div>
             <div class="modal-footer">
@@ -296,7 +297,7 @@
         .done(function(data) {
           console.log(data);
           
-          $('#friend-modal-body').append(`<p>${data.name}</p>`);
+          $('#friend-name').text(data.name);
           $('#friend-image').attr('src', data.photo);
           $('#friend-modal').modal('show');
 
@@ -315,6 +316,9 @@
         $('#question-eight').get(0).selectedIndex = 0;
         $('#question-nine').get(0).selectedIndex = 0;
         $('#question-ten').get(0).selectedIndex = 0;
+
+        $('#friend-image').attr('src', '');
+        $('#friend-name').text('');
 
       }); 
 
