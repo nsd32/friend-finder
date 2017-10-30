@@ -5,7 +5,7 @@ var friends = [
 	  "photo":"https://pbs.twimg.com/profile_images/779129231028682752/ijbnCAIa.jpg",
 	  "scores":[
 	      5,
-	      1,
+	      2,
 	      4,
 	      4,
 	      5,
